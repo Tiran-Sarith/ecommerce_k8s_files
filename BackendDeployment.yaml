@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: tiransarith/ecommerce-backend-1-10:2
+        image: tiransarith/ecommerce-backend-1-10:latest
         ports:
         - containerPort: 8070
         env:
