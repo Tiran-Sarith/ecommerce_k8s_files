@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: tiransarith/build-1-10:10
+        image: tiransarith/build-1-10:latest
         ports:
         - containerPort: 5173
     env:
