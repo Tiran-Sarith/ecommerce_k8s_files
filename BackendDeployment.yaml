@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: tiransarith/ecommerce-backend-1-10:2
+        ports:
+        - containerPort: 8070
+        env:
+        - name: MONGODB_URL
+          value: "mongodb+srv://tiransarith:n_48.k*pUEthKZN@cluster0.r9ebr5n.mongodb.net/ecommerce?retryWrites=true&w=majority&appName=Cluster0"  # Change as per your DB setup
+        
